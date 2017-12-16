@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from stepper.views import blinker
+
+admin.autodiscover()
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+	path('stepper/',blinker)
 ]
